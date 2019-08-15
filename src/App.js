@@ -22,7 +22,8 @@ const App = props => {
 	return (
 		<div className="boxes">
 			<div className="box">
-				<Header car={car} />
+				<Header />
+				{/* <Header car={car} /> */}
 				<AddedFeatures car={car} removeFeature={removeFeature} />
 			</div>
 			<div className="box">

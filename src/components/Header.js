@@ -10,24 +10,28 @@ const Header = props => {
       </figure>
       <h2>{props.car.name}</h2>
       <p>Amount: ${props.car.price}</p>
+      {/* {props.car.features.map(item => {
+      return <p>{item.name}</p>})} */}
     </>
   );
 };
 
-export default Header;
+//export default Header;
 
-// const mapStateToProps = state => {
-//   return {
-//     car:
-//     {
-//       price: state.car.price,
-//       name: state.car.name,
-//       image: state.car.image,
-//       // features: [...state.car.features]
-//     } 
-//   };
-// }
+const mapStateToProps = state => {
+  return {
+    car:
+    {
+      price: state.car.price,
+      name: state.car.name,
+      image: state.car.image,
+      features: [...state.car.features]
+    } 
+  };
+}
 
-// export default connect(
-//   mapStateToProps 
-// )(Header)
+export default connect(
+  mapStateToProps 
+)(Header)
+
+
